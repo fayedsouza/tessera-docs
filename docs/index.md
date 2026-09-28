@@ -40,7 +40,7 @@ sits downstream of that; it is the record, not the gate.
 
     Make your first authenticated call and record an event.
 
-    [Quickstart](get-started/quickstartt.md)
+    [Quickstart](get-started/quickstart.md)
 
 -   **Understanding the model**
 

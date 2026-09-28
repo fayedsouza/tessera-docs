@@ -1,0 +1,40 @@
+# Line endings are decided here, in the repository, rather than left to each
+# contributor's local core.autocrlf setting.
+#
+# Without this file, a contributor on Windows and one on macOS can produce pull
+# requests where every line reads as changed, because their editors disagree
+# about CRLF. That noise buries the actual edit and makes review useless.
+#
+# Everything is normalised to LF in the repository. Git still checks files out
+# with native endings on Windows, so editors behave as expected locally.
+
+* text=auto eol=lf
+
+# Documentation source
+*.md        text eol=lf
+*.markdown  text eol=lf
+
+# Configuration and CI
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.toml      text eol=lf
+*.json      text eol=lf
+*.txt       text eol=lf
+
+# Web assets, if the theme is ever extended
+*.html      text eol=lf
+*.css       text eol=lf
+*.js        text eol=lf
+*.svg       text eol=lf
+
+# Binary — never touch these, and never try to diff them as text
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
+*.eot       binary

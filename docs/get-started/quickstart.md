@@ -1,17 +1,16 @@
 # Quickstart
 
-Record your first access event and read it back. This takes about ten minutes and needs
-nothing installed beyond `curl`.
+This guide enables you to record your first access event and read it back. This task takes ten minutes and needs curl
+installed on your system.
 
-By the end you will have authenticated against the API, written one event, and retrieved
+By the end, you will have authenticated against the API, written one event, and retrieved
 it by ID.
 
 ## Before you begin
 
 You need:
 
-- A Tessera workspace. If you do not have one, your workspace administrator can invite
-  you, or you can create a sandbox workspace in the console.
+- A Tessera workspace. If you do not have one, contact your workspace administrator for an invite, or you can create a sandbox workspace in the console.
 - An API token with the `events:write` and `events:read` scopes. See
   [Create an API token](authentication.md#create-an-api-token) if you do not have one.
 
@@ -22,7 +21,7 @@ export TESSERA_TOKEN="tsk_live_REPLACE_ME"
 ```
 
 !!! warning "Tokens are shown once"
-    Tessera displays a token's secret only at the moment you create it. If you lose it,
+    Tessera displays a token's secret only the moment you create it. If you lose it,
     revoke the token and create a new one — there is no way to retrieve the original
     value.
 
@@ -48,7 +47,7 @@ A working token returns your workspace and the scopes attached to the token:
 }
 ```
 
-If you get a `401`, the token is wrong, revoked or expired. If you get a `403`, the token
+If you get a `401`, the token is wrong, revoked, or expired. If you get a `403`, the token
 is valid but lacks the scope for this endpoint. See
 [Error reference](../reference/errors.md) for the distinction.
 
@@ -154,3 +153,10 @@ One event in an append-only log, retrievable by ID, that no one can quietly alte
   you have more than one event.
 - [Handle rate limits](../guides/handle-rate-limits.md) — read this before you write a
   bulk import.
+
+  ## Related
+
+- [Authentication](authentication.md) — how the token used above is issued and refreshed.
+- [The access model](../concepts/access-model.md) — the principals, resources and events this Quickstart touched.
+- [Record an access event](../guides/record-an-access-event.md) — the full task, beyond the single example here.
+- [Query the audit log](../guides/query-the-audit-log.md) — filtering and paging once you have more than one event.
